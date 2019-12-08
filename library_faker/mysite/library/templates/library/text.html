@@ -1,0 +1,368 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <div class="container-fluid">
+        <h1 style="text-align: center; color: lightgreen">请选择预约偏好</h1>
+    </div>
+    <div class="container">
+        <p>我的预约：
+        {% if seat_info.cancel_id %}
+            {{ seat_info.location_info }}
+            <button type="button" class="btn btn-warning">取消预约</button>
+        {% else %}
+            无
+        {% endif %}
+        </p>
+    </div>
+    <form action="." method="POST">
+        {% csrf_token %}
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+                <label class="mr-sm-2" for="libraryID">Choose Library</label>
+                <select class="custom-select mr-sm-2" id="libraryID" name="library">
+                    <option selected value="1">信息学部图书馆</option>
+                    <option value="2">工学部图书馆</option>
+                    <option value="3">医学部图书馆</option>
+                    <option value="4">总馆</option>
+                </select>
+            </div>
+        </div>
+{#        <h1>选择图书馆</h1>#}
+{#        <input type="radio" name = "library" value="4">文理学部图书馆<br><br>#}
+{#        <input type="radio" name = "library" value="2">工学部图书馆<br><br>#}
+{#        <input type="radio" name = "library" value="1">信息学部图书馆<br><br>#}
+{#        <input type="radio" name = "library" value="3">医学部图书馆<br><br>#}
+        <hr>
+        <div>
+        <label for="Date">onDate</label>
+        <select name="onDate" id="Date" class="custom-select col-2">
+        </select>
+        </div>
+        <hr>
+{#        <h1>选择起止时间</h1>#}
+{#        <h2>开始时间</h2>#}
+        <div>
+        <label for="startTime">startTime</label>
+        <select name="startMin" id="startTime" class="custom-select col-2">
+            <option value="08:00">08:00</option>
+            <option value="08:15">08:15</option>
+            <option value="08:30">08:30</option>
+            <option value="08:45">08:45</option>
+            <option value="09:00">09:00</option>
+            <option value="09:15">09:15</option>
+            <option value="09:30">09:30</option>
+            <option value="09:45">09:45</option>
+            <option value="10:00">10:00</option>
+            <option value="10:15">10:15</option>
+            <option value="10:30">10:30</option>
+            <option value="10:45">10:45</option>
+            <option value="11:00">11:00</option>
+            <option value="11:15">11:15</option>
+            <option value="11:30">11:30</option>
+            <option value="11:45">11:45</option>
+            <option value="12:00">12:00</option>
+            <option value="12:15">12:15</option>
+            <option value="12:30">12:30</option>
+            <option value="12:45">12:45</option>
+            <option value="13:00">13:00</option>
+            <option value="13:15">13:15</option>
+            <option value="13:30">13:30</option>
+            <option value="13:45">13:45</option>
+            <option value="14:00">14:00</option>
+            <option value="14:15">14:15</option>
+            <option value="14:30">14:30</option>
+            <option value="14:45">14:45</option>
+            <option value="15:00">15:00</option>
+            <option value="15:15">15:15</option>
+            <option value="15:30">15:30</option>
+            <option value="15:45">15:45</option>
+            <option value="16:00">16:00</option>
+            <option value="16:15">16:15</option>
+            <option value="16:30">16:30</option>
+            <option value="16:45">16:45</option>
+            <option value="17:00">17:00</option>
+            <option value="17:15">17:15</option>
+            <option value="17:30">17:30</option>
+            <option value="17:45">17:45</option>
+            <option value="18:00">18:00</option>
+            <option value="18:15">18:15</option>
+            <option value="18:30">18:30</option>
+            <option value="18:45">18:45</option>
+            <option value="19:00">19:00</option>
+            <option value="19:15">19:15</option>
+            <option value="19:30">19:30</option>
+            <option value="19:45">19:45</option>
+            <option value="20:00">20:00</option>
+            <option value="20:15">20:15</option>
+            <option value="20:30">20:30</option>
+            <option value="20:45">20:45</option>
+            <option value="21:00">21:00</option>
+            <option value="21:15">21:15</option>
+            <option value="21:30">21:30</option>
+            <option value="21:45">21:45</option>
+            <option value="22:00">22:00</option>
+            <option value="22:15">22:15</option>
+            <option value="22:30">22:30</option>
+        </select>
+{#        <h2>结束时间</h2>#}
+        <label for="endTime">endTime</label>
+        <select name="endMin" id="endTime" class="custom-select col-2">
+            <option value="08:00" disabled>08:00</option>
+            <option value="08:15">08:15</option>
+            <option value="08:30">08:30</option>
+            <option value="08:45">08:45</option>
+            <option value="09:00">09:00</option>
+            <option value="09:15">09:15</option>
+            <option value="09:30">09:30</option>
+            <option value="09:45">09:45</option>
+            <option value="10:00">10:00</option>
+            <option value="10:15">10:15</option>
+            <option value="10:30">10:30</option>
+            <option value="10:45">10:45</option>
+            <option value="11:00">11:00</option>
+            <option value="11:15">11:15</option>
+            <option value="11:30">11:30</option>
+            <option value="11:45">11:45</option>
+            <option value="12:00">12:00</option>
+            <option value="12:15">12:15</option>
+            <option value="12:30">12:30</option>
+            <option value="12:45">12:45</option>
+            <option value="13:00">13:00</option>
+            <option value="13:15">13:15</option>
+            <option value="13:30">13:30</option>
+            <option value="13:45">13:45</option>
+            <option value="14:00">14:00</option>
+            <option value="14:15">14:15</option>
+            <option value="14:30">14:30</option>
+            <option value="14:45">14:45</option>
+            <option value="15:00">15:00</option>
+            <option value="15:15">15:15</option>
+            <option value="15:30">15:30</option>
+            <option value="15:45">15:45</option>
+            <option value="16:00">16:00</option>
+            <option value="16:15">16:15</option>
+            <option value="16:30">16:30</option>
+            <option value="16:45">16:45</option>
+            <option value="17:00">17:00</option>
+            <option value="17:15">17:15</option>
+            <option value="17:30">17:30</option>
+            <option value="17:45">17:45</option>
+            <option value="18:00">18:00</option>
+            <option value="18:15">18:15</option>
+            <option value="18:30">18:30</option>
+            <option value="18:45">18:45</option>
+            <option value="19:00">19:00</option>
+            <option value="19:15">19:15</option>
+            <option value="19:30">19:30</option>
+            <option value="19:45">19:45</option>
+            <option value="20:00">20:00</option>
+            <option value="20:15">20:15</option>
+            <option value="20:30">20:30</option>
+            <option value="20:45">20:45</option>
+            <option value="21:00">21:00</option>
+            <option value="21:15">21:15</option>
+            <option value="21:30">21:30</option>
+            <option value="21:45">21:45</option>
+            <option value="22:00">22:00</option>
+            <option value="22:15">22:15</option>
+            <option value="22:30">22:30</option>
+        </select><br>
+        </div>
+        <hr>
+        <!-- Default unchecked -->
+            choose the room that not expected
+        <div id="rooms">
+            <div>
+            <br>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="3C创客空间" checked value="3C创客空间" name="roomNotExpected">
+                <label class="custom-control-label" for="3C创客空间">3C创客空间</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="3C创客电子阅读" checked value="3C创客电子阅读" name="roomNotExpected">
+                <label class="custom-control-label" for="3C创客电子阅读">3C创客电子阅读</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="创新学习苹果区" checked value="创新学习苹果区" name="roomNotExpected">
+                <label class="custom-control-label" for="创新学习苹果区">创新学习苹果区</label>
+            </div>
+            <br>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="创新学习讨论区" checked value="创新学习讨论区" name="roomNotExpected">
+                <label class="custom-control-label" for="创新学习讨论区">创新学习讨论区</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="西自然科学区" value="西自然科学区" name="roomNotExpected">
+                <label class="custom-control-label" for="西自然科学区">西自然科学区</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="东自然科学区" value="东自然科学区" name="roomNotExpected">
+                <label class="custom-control-label" for="东自然科学区">东自然科学区</label>
+            </div>
+            <br>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="西社会科学区" value="西社会科学区" name="roomNotExpected">
+                <label class="custom-control-label" for="西社会科学区">西社会科学区</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="西图书阅览区" value="西图书阅览区" name="roomNotExpected">
+                <label class="custom-control-label" for="西图书阅览区">西图书阅览区</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="东社会科学区" value="东社会科学区" name="roomNotExpected">
+                <label class="custom-control-label" for="东社会科学区">东社会科学区</label>
+            </div>
+            <br>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="东图书阅览区" value="东图书阅览区" name="roomNotExpected">
+                <label class="custom-control-label" for="东图书阅览区">东图书阅览区</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="自主学习区" value="自主学习区" name="roomNotExpected">
+                <label class="custom-control-label" for="自主学习区">自主学习区</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="3C创客双屏电脑" value="3C创客双屏电脑" name="roomNotExpected">
+                <label class="custom-control-label" for="3C创客双屏电脑">3C创客双屏电脑</label>
+            </div>
+            <br>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="创新学习云桌面" value="创新学习云桌面" name="roomNotExpected">
+                <label class="custom-control-label" for="创新学习云桌面">创新学习云桌面</label>
+            </div>
+            <br>
+            </div>
+        </div>
+        <hr>
+        <label for="mode" class="mdb-main-label">fetch mode</label>
+        <select class="button custom-select-sm" id="mode" name="mode">
+          <option value="1">fetch by time(recommended)</option>
+          <option value="2">fetch by room</option>
+        </select>
+        <hr>
+        <button type="submit" class="btn btn-dark">Fetch seat</button>
+    </form>
+
+    <script>
+
+        add_time();
+        let now_time = getNowTime();
+        let start_list = $("#startTime");
+        let start_index = compare_time(start_list, now_time);
+        remove_node(start_list, start_index);
+        let end_list = $("#endTime");
+        let end_index = start_index + 1;
+        remove_node(end_list, end_index);
+
+        // 绑定监听事件
+        let library = $("#libraryID");
+        library.on("change", function() {
+           $.ajax({
+               url: "/library/get_room/",
+               data: {
+                   library: this.value
+               },
+               type: "POST",
+               dataType: "json",
+               success: (data) => {
+                   room_parse(data.rooms);
+               }
+           });
+        });
+
+        function room_parse(rooms) {
+            console.log(rooms);
+            let root_div = document.createElement("div");
+            // 注意变量的作用域
+            let br = document.createElement("br");
+            root_div.appendChild(br);
+            let count = 0;
+            for (let room in rooms) {
+                let input = document.createElement("input");
+                input.setAttribute("class", "custom-control-input");
+                input.setAttribute("type", rooms[room].type);
+                input.setAttribute("id", rooms[room].id);
+                input.setAttribute("value", rooms[room].value);
+                input.setAttribute("name", rooms[room].name);
+                if (rooms[room].checked) {
+                    input.setAttribute("checked", "");
+                }
+                let label = document.createElement("label");
+                label.setAttribute("class", "custom-control-label");
+                label.setAttribute("for", rooms[room].id);
+                label.innerText = rooms[room].id;
+                let div = document.createElement("div");
+                div.setAttribute("class", "custom-control custom-checkbox custom-control-inline");
+                div.appendChild(input);
+                div.appendChild(label);
+                root_div.append(div);
+                if (count === 2) {
+                    // 一个元素只能有一个父元素
+                    let br = document.createElement("br");
+                    root_div.appendChild(br);
+                    count = -1;
+                }
+                count += 1;
+            }
+
+            let rooms_node = $("#rooms");
+            rooms_node.empty();
+            rooms_node[0].appendChild(root_div);
+        }
+
+        function add_time() {
+            let elem = document.getElementById("Date");
+            let date = new Date();
+            let now_minutes = getNowTime();
+            if (now_minutes <= 1365) {
+                let now_day = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
+                let today_option = document.createElement("option");
+                today_option.setAttribute("value", now_day);
+                today_option.text = now_day;
+                elem.appendChild(today_option);
+            }
+            else if (now_minutes < 1430) {
+                let tomorrow_option = document.createElement("option");
+                date.setDate(date.getDate() + 1);
+                let tomorrow_day = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
+                tomorrow_option.setAttribute("value", tomorrow_day);
+                tomorrow_option.text = tomorrow_day;
+                tomorrow_option.setAttribute("selected", "");
+                elem.appendChild(tomorrow_option);
+            }
+        }
+
+        function remove_node(list, index) {
+            for (let i = 0; i < index; i++) {
+                list[0][0].remove();
+            }
+        }
+
+        function compare_time(list, now_time) {
+            let index = -1;
+            for (let i = 0; i < list[0].length; i++) {
+                let time_stamp = str_to_num(list[0][i].value);
+                if (time_stamp > now_time) {
+                    index = i;
+                    break;
+                }
+            }
+            if (index === -1) {
+                console.log("No match time!");
+                return null;
+            }
+            else {
+                return index;
+            }
+
+        }
+
+        function str_to_num(time_str) {
+            let time_list = time_str.split(":");
+            return Number(time_list[0]) * 60 + Number(time_list[1]);
+        }
+    </script>
+
+
+
+{% endblock %}

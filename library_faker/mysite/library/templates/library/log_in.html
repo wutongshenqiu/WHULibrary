@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="align-content-center">
+        <h2 style="text-align: center; color: lightblue">欢迎使用武汉大学图书馆抢座系统</h2>
+    </div>
+
+    <hr>
+    <form action="." method="POST">
+        {% csrf_token %}
+        <label for="sessionid">Session ID</label>
+        <div class="input-group mb-3">
+          <input type="text" id="sessionid" name="ssid" required class="form-control col-6" placeholder="Your Session ID" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="btn1" onclick="check(this)">Perform check</button>
+          </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-danger" id="btn2" disabled>Next</button>
+        </div>
+    </form>
+
+    <script>
+        function check(obj) {
+            obj.innerHTML = "  <span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>\n" +
+                "Checking";
+            obj.setAttribute("disabled", "");
+            $.ajax({
+                url: "/library/check/",
+                data: {
+                    ssid: document.getElementById("sessionid").value
+                },
+                type: "POST",
+                dataType: "json",
+                success: (data) => {
+                    if (data.status === "1") {
+                        document.getElementById("btn2").removeAttribute("disabled");
+                        let classVal = obj.getAttribute("class").replace("btn-outline-secondary", "btn-outline-success")
+                        obj.setAttribute("class", classVal);
+                        obj.innerHTML = "Access";
+                    }
+                    else {
+                        let classVal = obj.getAttribute("class").replace("btn-outline-secondary", "btn-outline-danger")
+                        obj.removeAttribute("disabled");
+                        obj.innerHTML = "Perform Check";
+                        $("#sessionid").val("");
+                        if (data.status === "2") {
+                            alert("系统正在维护，请稍后！")
+                        }
+                        else {
+                            alert("wrong sessionid!");
+                        }
+
+                    }
+
+                }
+            })
+        }
+
+    </script>
+{% endblock %}
+

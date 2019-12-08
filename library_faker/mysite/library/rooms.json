@@ -1,0 +1,376 @@
+{
+  "rooms": {
+    "1": {
+      "3C创客空间": {
+        "type": "checkbox",
+        "id": "3C创客空间",
+        "value": "3C创客空间",
+        "name": "roomNotExpected",
+        "checked": true
+      },
+      "3C创客电子阅读": {
+        "type": "checkbox",
+        "id": "3C创客电子阅读",
+        "value": "3C创客电子阅读",
+        "name": "roomNotExpected",
+        "checked": true
+      },
+      "创新学习苹果区": {
+        "type": "checkbox",
+        "id": "创新学习苹果区",
+        "value": "创新学习苹果区",
+        "name": "roomNotExpected",
+        "checked": true
+      },
+      "创新学习讨论区": {
+        "type": "checkbox",
+        "id": "创新学习讨论区",
+        "value": "创新学习讨论区",
+        "name": "roomNotExpected",
+        "checked": true
+      },
+      "西自然科学区": {
+        "type": "checkbox",
+        "id": "西自然科学区",
+        "value": "西自然科学区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "东自然科学区": {
+        "type": "checkbox",
+        "id": "东自然科学区",
+        "value": "东自然科学区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "西社会科学区": {
+        "type": "checkbox",
+        "id": "西社会科学区",
+        "value": "西社会科学区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "西图书阅览区": {
+        "type": "checkbox",
+        "id": "西图书阅览区",
+        "value": "西图书阅览区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "东社会科学区": {
+        "type": "checkbox",
+        "id": "东社会科学区",
+        "value": "东社会科学区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "东图书阅览区": {
+        "type": "checkbox",
+        "id": "东图书阅览区",
+        "value": "东图书阅览区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "自主学习区": {
+        "type": "checkbox",
+        "id": "自主学习区",
+        "value": "自主学习区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "3C创客双屏电脑": {
+        "type": "checkbox",
+        "id": "3C创客双屏电脑",
+        "value": "3C创客双屏电脑",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "创新学习云桌面": {
+        "type": "checkbox",
+        "id": "创新学习云桌面",
+        "value": "创新学习云桌面",
+        "name": "roomNotExpected",
+        "checked": false
+      }
+    },
+    "2": {
+      "201自科图书区": {
+        "type": "checkbox",
+        "id": "201自科图书区",
+        "value": "201自科图书区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "2楼走廊": {
+        "type": "checkbox",
+        "id": "2楼走廊",
+        "value": "2楼走廊",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "205电阅笔记本区": {
+        "type": "checkbox",
+        "id": "205电阅笔记本区",
+        "value": "205电阅笔记本区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "301东自科借阅区": {
+        "type": "checkbox",
+        "id": "301东自科借阅区",
+        "value": "301东自科借阅区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "305中自科借阅区": {
+        "type": "checkbox",
+        "id": "305中自科借阅区",
+        "value": "305中自科借阅区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "401东自科借阅区": {
+        "type": "checkbox",
+        "id": "401东自科借阅区",
+        "value": "401东自科借阅区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "405中期刊借阅区": {
+        "type": "checkbox",
+        "id": "405中期刊借阅区",
+        "value": "405中期刊借阅区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "501东外文借阅区": {
+        "type": "checkbox",
+        "id": "501东外文借阅区",
+        "value": "501东外文借阅区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "505中自科借阅区": {
+        "type": "checkbox",
+        "id": "505中自科借阅区",
+        "value": "505中自科借阅区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "205电阅云桌面区": {
+        "type": "checkbox",
+        "id": "205电阅云桌面区",
+        "value": "205电阅云桌面区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "103空间双屏云桌面": {
+        "type": "checkbox",
+        "id": "103空间双屏云桌面",
+        "value": "103空间双屏云桌面",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "一楼中部走廊": {
+        "type": "checkbox",
+        "id": "一楼中部走廊",
+        "value": "一楼中部走廊",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "103支点空间": {
+        "type": "checkbox",
+        "id": "103支点空间",
+        "value": "103支点空间",
+        "name": "roomNotExpected",
+        "checked": false
+      }
+    },
+    "3": {
+      "204教学参考区": {
+        "type": "checkbox",
+        "id": "204教学参考区",
+        "value": "204教学参考区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "302中文科技B区": {
+        "type": "checkbox",
+        "id": "302中文科技B区",
+        "value": "302中文科技B区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "305科技期刊区": {
+        "type": "checkbox",
+        "id": "305科技期刊区",
+        "value": "305科技期刊区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "402中文文科区": {
+        "type": "checkbox",
+        "id": "402中文文科区",
+        "value": "402中文文科区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "502外文区": {
+        "type": "checkbox",
+        "id": "502外文区",
+        "value": "502外文区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "506医学人文区": {
+        "type": "checkbox",
+        "id": "506医学人文区",
+        "value": "506医学人文区",
+        "name": "roomNotExpected",
+        "checked": false
+      }
+    },
+    "4": {
+      "A1座位区": {
+        "type": "checkbox",
+        "id": "A1座位区",
+        "value": "A1座位区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "A2借阅区": {
+        "type": "checkbox",
+        "id": "A2借阅区",
+        "value": "A2借阅区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "A3": {
+        "type": "checkbox",
+        "id": "A3",
+        "value": "A3",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "A4": {
+        "type": "checkbox",
+        "id": "502外文区",
+        "value": "502外文区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "A5": {
+        "type": "checkbox",
+        "id": "A5",
+        "value": "A5",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "A1沙发区": {
+        "type": "checkbox",
+        "id": "A1沙发区",
+        "value": "A1沙发区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "A1电子阅览室": {
+        "type": "checkbox",
+        "id": "A1电子阅览室",
+        "value": "A1电子阅览室",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "A1手提电脑区": {
+        "type": "checkbox",
+        "id": "A1手提电脑区",
+        "value": "A1手提电脑区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "E2报刊阅览区": {
+        "type": "checkbox",
+        "id": "E2报刊阅览区",
+        "value": "E2报刊阅览区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "E3学位论文预览区": {
+        "type": "checkbox",
+        "id": "E3学位论文预览区",
+        "value": "E3学位论文预览区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "E4港台文献阅览区": {
+        "type": "checkbox",
+        "id": "E4港台文献阅览区",
+        "value": "E4港台文献阅览区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "E5地方文献阅览区": {
+        "type": "checkbox",
+        "id": "E5地方文献阅览区",
+        "value": "E5地方文献阅览区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "E6影音文献": {
+        "type": "checkbox",
+        "id": "E6影音文献",
+        "value": "E6影音文献",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "E2大厅": {
+        "type": "checkbox",
+        "id": "E2大厅",
+        "value": "E2大厅",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "E1信息共享空间": {
+        "type": "checkbox",
+        "id": "E1信息共享空间",
+        "value": "E1信息共享空间",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "E1信息共享空间双屏云桌面区": {
+        "type": "checkbox",
+        "id": "E1信息共享空间双屏云桌面区",
+        "value": "E1信息共享空间双屏云桌面区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "C1自习区": {
+        "type": "checkbox",
+        "id": "C1自习区",
+        "value": "C1自习区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "A2多媒体苹果电脑区": {
+        "type": "checkbox",
+        "id": "A2多媒体苹果电脑区",
+        "value": "A2多媒体苹果电脑区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "A2多媒体视频工作站区": {
+        "type": "checkbox",
+        "id": "A2多媒体视频工作站区",
+        "value": "A2多媒体视频工作站区",
+        "name": "roomNotExpected",
+        "checked": false
+      },
+      "B1": {
+        "type": "checkbox",
+        "id": "B1",
+        "value": "B1",
+        "name": "roomNotExpected",
+        "checked": false
+      }
+    }
+  }
+}

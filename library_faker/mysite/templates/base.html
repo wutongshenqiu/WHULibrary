@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>509 Studio LibrarySpider</title>
+    <link rel="shortcut icon" href="/media/ico/logo.png" type="image/png">
+<!--    <link rel="stylesheet" href="{% static 'css/loading.css'%}">-->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
+</head>
+<body>
+<!--    <script src="{% static 'js/loading.js' %}"></script>-->
+    <script src="{% static 'js/somemethods.js' %}"></script>
+    <script src="{% static 'jquery/jquery.js' %}"></script>
+    {% block body %}{% endblock %}
+</body>
+</html>

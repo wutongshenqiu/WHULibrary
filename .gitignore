@@ -1,0 +1,10 @@
+# ignore files
+library_faker/venv/
+.vscode
+.idea
+library_faker/.idea
+library_faker/*.pyc
+library_faker/mysite/library/__pycache__/
+library_faker/mysite/mysite/__pycache__/
+library_faker/mysite/db.sqlite3
+library_faker/mysite/library/migrations
