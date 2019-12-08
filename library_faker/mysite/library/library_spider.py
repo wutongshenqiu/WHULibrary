@@ -13,6 +13,7 @@ from datetime import datetime
 from copy import deepcopy
 import re
 from .models import CookieModel
+import random
 from django.shortcuts import get_object_or_404
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -286,35 +287,36 @@ class LibrarySpider:
         # room_not_expected = ["3C创客空间", "创新学习讨论区", "创新学习苹果区", "3C创客电子阅读"]
 
         # 定时抢座
-        interval = 300
+        interval = 100
         self.keep_connection()
-        while int(offset) != -1:
-            try:
-                data_json = get_json_by_time(self.search_url, self.ua.random, cookies=self.cookies, offset=offset,
-                                             building=building, startMin=self.startTime, endMin=self.endTime, onDate=onDate)
-                offset = data_json.get("offset")
-                print(offset)
-                if offset and ~int(offset):
-                    interval = int(offset)*100
-                if data_json.get("seatNum"):
-                    doc = pq(data_json.get("seatStr"))
+        while True:
+            while offset and ~int(offset):
+                try:
+                    data_json = get_json_by_time(self.search_url, self.ua.random, cookies=self.cookies, offset=offset,
+                                                 building=building, startMin=self.startTime, endMin=self.endTime, onDate=onDate)
+                    offset = data_json.get("offset")
+                    print(offset)
+                    interval += random.randint(100, 150)
+                    if data_json.get("seatNum"):
+                        doc = pq(data_json.get("seatStr"))
 
-                    for li, dd in zip(doc("li"), doc("li dl dd")):
-                        seat_id = pattern.match(li.attrib.get("id")).group(1)
-                        seat_room = dd.text.strip()
-                        if room_not_expected:
-                            if seat_room in room_not_expected:
-                                continue
-                        result = self.fetch_seat(seat_id, self.startTime, self.endTime, date="")
-                        if result:
-                            self.seat_info = LibrarySpider.get_seat_info(cookies=self.cookies)
-                            print(f"预约成功，座位信息\n{self.seat_info}")
-                            return
-            except Exception as e:
-                print(e.args)
+                        for li, dd in zip(doc("li"), doc("li dl dd")):
+                            seat_id = pattern.match(li.attrib.get("id")).group(1)
+                            seat_room = dd.text.strip()
+                            if room_not_expected:
+                                if seat_room in room_not_expected:
+                                    continue
+                            result = self.fetch_seat(seat_id, self.startTime, self.endTime, date="")
+                            if result:
+                                self.seat_info = LibrarySpider.get_seat_info(cookies=self.cookies)
+                                print(f"预约成功，座位信息\n{self.seat_info}")
+                                return
+                except Exception as e:
+                    print(e.args)
             print(f"预约失败，休眠{interval}s")
             time.sleep(interval)
             offset = "0"
+            interval = 100
 
     def send_req_humanly(self, building, startMin, endMin, room_not_expected, power="null", window="null", onDate=""):
         # 绑定开始时间和结束时间
