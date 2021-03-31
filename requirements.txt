@@ -10,7 +10,7 @@ fake-useragent==0.1.11
 get==2019.4.13
 idna==2.8
 immutables==0.9
-lxml==4.4.1
+lxml==4.6.3
 multidict==4.5.2
 post==2019.4.13
 public==2019.4.13
